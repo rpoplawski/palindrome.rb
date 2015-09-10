@@ -9,9 +9,9 @@ require 'minitest/pride'
 
 # WRITE YOUR CODE ABOVE HERE.
 def palindrome?(word)
-  adjusted_word == word.gsub(/[ ,\.!'’ ;]/, '’).downcase
+  adjusted_word = word.gsub(/\W/, '').downcase
 
-  adjusted_word == cleaned_word.reverse
+  adjusted_word == adjusted_word.reverse
 end
 
 class StringPalindromeChallenge < MiniTest::Test
